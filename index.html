@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gource Generator</title>
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero container">
+            <div class="title">
+                <h1>Gource Code Generator</h1>
+            </div>
+        </div>
+    </section>
+    <!-- End of Hero Section -->
+
+
+    <!-- Project Section -->
+    <section id="project">
+        <div class="project container">
+            <h2 class="project-title">Click on the below code to copy to clipboard</h2>
+            <div class="gource-section">
+                <div class="commands">
+                    <h3>Display Settings</h3>
+                    <p>You can set the screen resolution with -WIDTHxHEIGHT and switch to full-screen mode with -f. To
+                        set
+                        the view to full-screen 720p:</p>
+                    <p class="g-command" id="displaySettings" onclick="copyElementText(this.id)">gource -f -1280x720</p>
+                </div>
+
+
+                <div class="commands">
+                    <h3>Camera Controls</h3>
+                    <p>Gource has two camera modes:</p>
+                    <ul>
+                        <li>overview - keeps the entire repository in view.</li>
+                        <li>track - follows the current active users or the selected user.</li>
+                    </ul>
+                    <p>The default mode is 'overview'. To set the camera mode to 'track':</p>
+                    <p class="g-command" id="cameraControls" onclick="copyElementText(this.id)">gource --camera-mode
+                        track</p>
+                </div>
+
+                <div class="commands">
+                    <h3>Bloom</h3>
+                    <p>Gource has some command line options to control the appearance of the 'light bloom' effect that
+                        appears around directories.
+                    <p>You can affect the radius of the bloom using
+                        <span>--bloom-multiplier</span>, and the
+                        intensity using <span>--bloom-intensity</span>.
+                    </p>
+                    </p>
+                    <p>To get double the radius and double the normal intensity you would use:</p>
+                    <p class="g-command" id="bloom" onclick="copyElementText(this.id)">gource --bloom-multiplier 2.0
+                        --bloom-intensity
+                        1.5
+                    </p>
+                </div>
+                <div class="commands">
+                    <h3>Background</h3>
+                    <p>The background colour can be set with the --background option followed by a colour in hex format
+                        like in HTML. Don't forget to replace the numbers with the color code 😉</p>
+                    <p class="g-command" id="gBackground" onclick="copyElementText(this.id)">gource --background 555555
+                    </p>
+                </div>
+
+
+
+
+                <div class="commands">
+                    <h3>Start / Stop Position</h3>
+                    <p>Use <span>--start-position and</span> <span>--stop-position</span> to specify the period
+                        of the project
+                        history to display.
+                        The argument is a fraction of the total length of the project history file:</p>
+                    <p class="g-command" id="startstop" onclick="copyElementText(this.id)">gource --start-position 0.5
+                        --stop-position
+                        0.75</p>
+                </div>
+
+
+                <div class="commands">
+                    <h3>Auto Skip Seconds</h3>
+                    <p>Some projects may have gaps in activity in the span of days or weeks. To avoid the boring bits,
+                        Gource will advance to the next entry (after 3 seconds by default) if nothing is happening.</p>
+                    <p>To change the auto skip seconds value:</p>
+                    <p class="g-command" id="autoSkipSeconds" onclick="copyElementText(this.id)">gource
+                        --auto-skip-seconds 1</p>
+                    <p>The sister command --disable-auto-skip may be used to turn this feature off:</p>
+                    <p class="g-command" id="autoSkipDisable" onclick="copyElementText(this.id)">gource
+                        --disable-auto-skip</p>
+                </div>
+
+
+                <div class="commands">
+                    <h3>File Idle Time</h3>
+                    <p>By default, Gource 'expires' files which haven't been touched by a user in the 60 seconds. You
+                        can change the amount of time files remain without changing with:</p>
+                    <p class="g-command" id="fileIdleTimeSeconds" onclick="copyElementText(this.id)">--file-idle-time
+                        SECONDS</p>
+                    <p>To turn expiring files off:</p>
+                    <p class="g-command" id="fileIdleTime" onclick="copyElementText(this.id)">--file-idle-time 0</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Project Section -->
+
+
+    <!-- Footer Section -->
+    <section id="end">
+        <div class="bottom container">
+            <div class="close info">
+                <p>Copyright © 2021 Anton. All rights reserved.</p>
+            </div>
+            <div class="img">
+            </div>
+        </div>
+    </section>
+    <!-- End of Footer Section -->
+    <script src="app.js"></script>
+</body>
+
+
+
+</html>

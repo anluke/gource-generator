@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 12px;
+}
+
+
+/* Hero Section */
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#hero{
+    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.377) 
+    ,rgba(0, 0, 0, 0.377)), url(./img/hero.jpg);
+    background-size: cover;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.title h1{
+    font-size: 5rem;
+    color:rgb(243, 168, 28);
+}
+/* End of Hero Section */
+
+
+/* Project Section */
+#project{
+    background-color: rgb(27, 27, 27);
+    color: white;
+    min-height: 80vh;
+    padding: 0 2rem;;
+}
+.project-title{
+    margin-top: 4rem;
+    font-size: 2.3rem;
+}
+.gource-section{
+    margin: 2rem 0;
+    }
+
+.commands{
+    padding: 3rem 0;
+}
+.commands h3{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+.commands p{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+.commands ul{
+    padding-left: 2rem;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+.commands span{
+    background-color: rgba(128, 128, 128, 0.226);
+    font-family: 'Source Code Pro', 'Ubuntu', monospace;
+    border-radius: 5px;
+    padding: .1rem .1rem;
+}
+.g-command{
+    background-color: rgb(38, 43, 66);
+    margin: 1.5rem 0;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    max-width:500px;
+    font-family: 'Source Code Pro', 'Ubuntu', monospace;
+}
+.g-command:hover{
+    color: rgb(38, 43, 66);
+    background-color: rgb(182, 182, 182);
+    cursor:pointer;
+    transform: scale(1.015);
+    transition: ease 0.3s;
+}
+
+/* End of Project Section */
+
+
+
+/* Footer Section */
+#end{
+    background-color: black;
+    color: white;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* End of Footer Section */
+
+
+/* Media Queries */
+
+@media only screen and (min-width: 768px) {
+    #hero{
+        min-height: 30vh;
+        }
+        .title h1{
+            font-size: 4rem;
+        }
+}
+@media only screen and (min-width: 300px) {
+    #hero{
+        min-height: 25vh;
+        }
+    .title h1{
+        font-size: 2rem;
+    }
+    .project-title{
+        font-size: 1.6rem;
+    }
+}
+
+/* POPUP/ */
