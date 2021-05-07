@@ -42,6 +42,7 @@ html{
     color: white;
     min-height: 80vh;
     padding: 0 2rem;;
+    padding-bottom: 200px;
 }
 .project-title{
     margin-top: 4rem;
@@ -88,9 +89,7 @@ html{
     transform: scale(1.015);
     transition: ease 0.3s;
 }
-
 /* End of Project Section */
-
 
 
 /* Footer Section */
@@ -102,29 +101,95 @@ html{
     justify-content: center;
     align-items: center;
 }
+
+#end p{
+    font-size: 1.3rem;
+}
 /* End of Footer Section */
+
+
 
 
 /* Media Queries */
 
-/* @media only screen and (min-width: 768px) {
+
+/* MOBILE PHONES */
+
+@media only screen and (max-width: 600px) {
+    #hero{
+        min-height: 30vh;
+        }
+    .title h1{
+        font-size: 2rem;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .project-title{
+        font-size: 1.4rem;
+        text-align: center;
+        text-transform: capitalize;
+    }
+    .commands h3{
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+    .commands p{
+        font-size: 1rem;
+        font-weight: 300;
+    }
+    .commands ul{
+        font-size: 1rem;
+        font-weight: 300;
+    }
+    #project{
+        padding: 0 1rem;
+        padding-bottom: 7rem;
+    }
+
+    #end{
+        min-height: 60px;
+    }
+    
+    #end p{
+        font-size: .8rem;
+    }
+}
+
+
+/* TABLET */
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
     #hero{
         min-height: 30vh;
         }
         .title h1{
-            font-size: 4rem;
+            font-size: 3rem;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: .3rem;
+            word-spacing: 1rem;
         }
-}
-@media only screen and (min-width: 300px) {
-    #hero{
-        min-height: 25vh;
-        }
-    .title h1{
-        font-size: 2rem;
-    }
-    .project-title{
-        font-size: 1.6rem;
-    }
-} */
+        .project-title{
+            font-size: 2rem;
+            text-align: center;
+            text-transform: capitalize;
+            word-spacing: 0.2rem;
 
-/* POPUP/ */
+        }
+        .commands h3{
+            font-size: 1.7rem;
+            font-weight: 500;
+        }
+        .commands p{
+            font-size: 1.25rem;
+            font-weight: 300;
+        }
+        .commands ul{
+            font-size: 1.25rem;
+            font-weight: 300;
+        }
+        #project{
+            padding: 0 3rem;
+            padding-bottom: 150px;
+        }    
+}
